@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>sqlmap帮助文档 - Se7en&#039;s Blog|资深apt install专家。</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Se7en&#039;s Blog|资深apt install专家。"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Se7en&#039;s Blog|资深apt install专家。"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="Usage: python sqlmap.py [options] Options（选项）:   -h, –help            Show basic help message and exit        显示此帮助消息并退出  -hh                   Show advanced help message and exit     展示先进的帮助信息并退出  –"><meta property="og:type" content="blog"><meta property="og:title" content="sqlmap帮助文档"><meta property="og:url" content="https://www.se7ensec.cn/2018/08/08/sqlmap%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"><meta property="og:site_name" content="Se7en&#039;s Blog|资深apt install专家。"><meta property="og:description" content="Usage: python sqlmap.py [options] Options（选项）:   -h, –help            Show basic help message and exit        显示此帮助消息并退出  -hh                   Show advanced help message and exit     展示先进的帮助信息并退出  –"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2018.8.8/sqlmap.png"><meta property="article:published_time" content="2018-08-08T04:30:24.000Z"><meta property="article:modified_time" content="2020-02-08T14:38:56.753Z"><meta property="article:author" content="Se7en"><meta property="article:tag" content="Sqlmap"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2018.8.8/sqlmap.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.se7ensec.cn/2018/08/08/sqlmap%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"},"headline":"Se7en's Blog|资深apt install专家。","image":["https://raw.githubusercontent.com/r00tSe7en/pictures/master/2018.8.8/sqlmap.png"],"datePublished":"2018-08-08T04:30:24.000Z","dateModified":"2020-02-08T14:38:56.753Z","author":{"@type":"Person","name":"Se7en"},"description":"Usage: python sqlmap.py [options] Options（选项）:   -h, –help            Show basic help message and exit        显示此帮助消息并退出  -hh                   Show advanced help message and exit     展示先进的帮助信息并退出  –"}</script><link rel="canonical" href="https://www.se7ensec.cn/2018/08/08/sqlmap%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Se7en's Blog|资深apt install专家。" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="Se7en&#039;s Blog|资深apt install专家。" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2018-08-08T04:30:24.000Z" title="2018-08-08T04:30:24.000Z">2018-08-08</time>发表</span><span class="level-item"><time dateTime="2020-02-08T14:38:56.753Z" title="2020-02-08T14:38:56.753Z">2020-02-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></span><span class="level-item">28 分钟读完 (大约4241个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">sqlmap帮助文档</h1><div class="content"><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2018.8.8/sqlmap.png" alt="sqlmap"></p>
+<p>Usage: python sqlmap.py [options]</p>
+<p>Options（选项）:</p>
+<p>  -h, –help            Show basic help message and exit        显示此帮助消息并退出<br>  -hh                   Show advanced help message and exit     展示先进的帮助信息并退出<br>  –version             Show program’s version number and exit  显示程序的版本号并退出<br>  -v VERBOSE            Verbosity level: 0-6 (default 1)        详细级别：0-6（默认为1）<br> <a id="more"></a><br>  Target（目标）:</p>
+<pre><code>At least one of these options has to be provided to define the  
+target(s)
+以下至少需要设置其中一个选项，设置目标URL。
+
+-d DIRECT           Connection string for direct database connection        直接连接到数据库。
+-u URL, --url=URL   Target URL (e.g. &quot;http://www.site.com/vuln.php?id=1&quot;)   目标URL。
+-l LOGFILE          Parse target(s) from Burp or WebScarab proxy log file   解析目标(s)从Burp或WebScarab代理日志文件
+-x SITEMAPURL       Parse target(s) from remote sitemap(.xml) file          解析目标(s)从远程站点地图文件(.xml)
+-m BULKFILE         Scan multiple targets given in a textual file           扫描文本文件中给出的多个目标
+-r REQUESTFILE      Load HTTP request from a file                           从文件加载HTTP请求
+-g GOOGLEDORK       Process Google dork results as target URLs              处理Google dork的结果作为目标URL。
+-c CONFIGFILE       Load options from a configuration INI file              从INI配置文件中加载选项。</code></pre>
+<p>  Request（请求）:</p>
+<pre><code>These options can be used to specify how to connect to the target URL   这些选项可以用来指定如何连接到目标URL。
+
+--method=METHOD     Force usage of given HTTP method (e.g. PUT)          强制使用给定的HTTP方法（e.g. PUT）
+--data=DATA         Data string to be sent through POST                  通过POST发送的数据字符串
+--param-del=PARA..  Character used for splitting parameter values        用于拆分参数值的字符
+--cookie=COOKIE     HTTP Cookie header value                             HTTP Cookie头的值
+--cookie-del=COO..  Character used for splitting cookie values           用于分割Cookie值的字符
+--load-cookies=L..  File containing cookies in Netscape/wget format      包含Netscape / wget格式的cookie的文件
+--drop-set-cookie   Ignore Set-Cookie header from response               从响应中忽略Set-Cookie头
+--user-agent=AGENT  HTTP User-Agent header value                         指定 HTTP User - Agent头  
+--random-agent      Use randomly selected HTTP User-Agent header value   使用随机选定的HTTP User - Agent头 
+--host=HOST         HTTP Host header value                                HTTP主机头值
+--referer=REFERER   HTTP Referer header value                             指定 HTTP Referer头
+-H HEADER, --hea..  Extra header (e.g. &quot;X-Forwarded-For: 127.0.0.1&quot;)      额外header
+--headers=HEADERS   Extra headers (e.g. &quot;Accept-Language: fr\nETag: 123&quot;) 额外header
+--auth-type=AUTH..  HTTP authentication type (Basic, Digest, NTLM or PKI) HTTP认证类型(Basic, Digest, NTLM or PKI)
+--auth-cred=AUTH..  HTTP authentication credentials (name:password)       HTTP认证凭证(name:password)
+--auth-file=AUTH..  HTTP authentication PEM cert/private key file         HTTP认证 PEM认证/私钥文件
+--ignore-401        Ignore HTTP Error 401 (Unauthorized)                  忽略HTTP错误401(未经授权)
+--proxy=PROXY       Use a proxy to connect to the target URL              使用代理连接到目标网址
+--proxy-cred=PRO..  Proxy authentication credentials (name:password)      代理认证证书(name:password) 
+--proxy-file=PRO..  Load proxy list from a file                           从文件中加载代理列表
+--ignore-proxy      Ignore system default proxy settings                  忽略系统默认代理设置
+--tor               Use Tor anonymity network                             使用Tor匿名网络
+--tor-port=TORPORT  Set Tor proxy port other than default                 设置Tor代理端口而不是默认值
+--tor-type=TORTYPE  Set Tor proxy type (HTTP (default), SOCKS4 or SOCKS5) 设置Tor代理类型
+--check-tor         Check to see if Tor is used properly                  检查Tor是否正确使用
+--delay=DELAY       Delay in seconds between each HTTP request             每个HTTP请求之间的延迟（秒）
+--timeout=TIMEOUT   Seconds to wait before timeout connection (default 30) 秒超时连接前等待（默认30）
+--retries=RETRIES   Retries when the connection timeouts (default 3)       连接超时时重试（默认值3）
+--randomize=RPARAM  Randomly change value for given parameter(s)           随机更改给定参数的值(s)
+--safe-url=SAFEURL  URL address to visit frequently during testing         在测试期间频繁访问的URL地址
+--safe-post=SAFE..  POST data to send to a safe URL                        POST数据发送到安全URL
+--safe-req=SAFER..  Load safe HTTP request from a file                     从文件加载安全HTTP请求
+--safe-freq=SAFE..  Test requests between two visits to a given safe URL   在两次访问给定安全网址之间测试请求
+--skip-urlencode    Skip URL encoding of payload data                      跳过有效载荷数据的URL编码
+--csrf-token=CSR..  Parameter used to hold anti-CSRF token                 参数用于保存anti-CSRF令牌
+--csrf-url=CSRFURL  URL address to visit to extract anti-CSRF token        提取anti-CSRF URL地址访问令牌
+--force-ssl         Force usage of SSL/HTTPS                               强制使用SSL / HTTPS
+--hpp               Use HTTP parameter pollution method                    使用HTTP参数pollution的方法
+--eval=EVALCODE     Evaluate provided Python code before the request (e.g. 评估请求之前提供Python代码
+                    &quot;import hashlib;id2=hashlib.md5(id).hexdigest()&quot;)</code></pre>
+<p>  Optimization（优化）:</p>
+<pre><code>These options can be used to optimize the performance of sqlmap    这些选项可用于优化sqlmap的性能
+
+-o                  Turn on all optimization switches                        开启所有优化开关
+--predict-output    Predict common queries output                            预测常见的查询输出
+--keep-alive        Use persistent HTTP(s) connections                       使用持久的HTTP（S）连接
+--null-connection   Retrieve page length without actual HTTP response body   从没有实际的HTTP响应体中检索页面长度
+--threads=THREADS   Max number of concurrent HTTP(s) requests (default 1)    最大的HTTP（S）请求并发量（默认为1）</code></pre>
+<p>  Injection（注入）:</p>
+<pre><code>These options can be used to specify which parameters to test for,
+provide custom injection payloads and optional tampering scripts 
+这些选项可以用来指定测试哪些参数， 提供自定义的注入payloads和可选篡改脚本。
+
+-p TESTPARAMETER    Testable parameter(s)                                      可测试的参数（S）
+--skip=SKIP         Skip testing for given parameter(s)                        跳过对给定参数的测试
+--skip-static       Skip testing parameters that not appear to be dynamic      跳过测试不显示为动态的参数
+--param-exclude=..  Regexp to exclude parameters from testing (e.g. &quot;ses&quot;)     使用正则表达式排除参数进行测试（e.g. &quot;ses&quot;）
+--dbms=DBMS         Force back-end DBMS to this value                          强制后端的DBMS为此值  
+--dbms-cred=DBMS..  DBMS authentication credentials (user:password)            DBMS认证凭证(user:password) 
+--os=OS             Force back-end DBMS operating system to this value         强制后端的DBMS操作系统为这个值
+--invalid-bignum    Use big numbers for invalidating values                    使用大数字使值无效
+--invalid-logical   Use logical operations for invalidating values             使用逻辑操作使值无效
+--invalid-string    Use random strings for invalidating values                 使用随机字符串使值无效
+--no-cast           Turn off payload casting mechanism                         关闭有效载荷铸造机制
+--no-escape         Turn off string escaping mechanism                         关闭字符串转义机制
+--prefix=PREFIX     Injection payload prefix string                            注入payload字符串前缀
+--suffix=SUFFIX     Injection payload suffix string                            注入payload字符串后缀  
+--tamper=TAMPER     Use given script(s) for tampering injection data           使用给定的脚本（S）篡改注入数据</code></pre>
+<p>  Detection（检测）:</p>
+<pre><code>These options can be used to customize the detection phase 这些选项可以用来指定在SQL盲注时如何解析和比较HTTP响应页面的内容。
+
+--level=LEVEL       Level of tests to perform (1-5, default 1)          执行测试的等级（1-5，默认为1）
+--risk=RISK         Risk of tests to perform (1-3, default 1)           执行测试的风险（0-3，默认为1）
+--string=STRING     String to match when query is evaluated to True     查询时有效时在页面匹配字符串 
+--not-string=NOT..  String to match when query is evaluated to False    当查询求值为无效时匹配的字符串
+--regexp=REGEXP     Regexp to match when query is evaluated to True     查询时有效时在页面匹配正则表达式
+--code=CODE         HTTP code to match when query is evaluated to True  当查询求值为True时匹配的HTTP代码
+--text-only         Compare pages based only on the textual content     仅基于在文本内容比较网页
+--titles            Compare pages based only on their titles            仅根据他们的标题进行比较</code></pre>
+<p>  Techniques（技巧）:</p>
+<pre><code>These options can be used to tweak testing of specific SQL injection
+techniques 
+这些选项可用于调整具体的SQL注入测试。 
+
+--technique=TECH    SQL injection techniques to use (default &quot;BEUSTQ&quot;)      SQL注入技术测试（默认BEUST）
+--time-sec=TIMESEC  Seconds to delay the DBMS response (default 5)          DBMS响应的延迟时间（默认为5秒）
+--union-cols=UCOLS  Range of columns to test for UNION query SQL injection  定列范围用于测试UNION查询注入
+--union-char=UCHAR  Character to use for bruteforcing number of columns     用于暴力猜解列数的字符
+--union-from=UFROM  Table to use in FROM part of UNION query SQL injection  要在UNION查询SQL注入的FROM部分使用的表
+--dns-domain=DNS..  Domain name used for DNS exfiltration attack            域名用于DNS漏出攻击
+--second-order=S..  Resulting page URL searched for second-order response   生成页面的URL搜索为second-order响应</code></pre>
+<p>  Fingerprint（指纹）:</p>
+<pre><code>-f, --fingerprint   Perform an extensive DBMS version fingerprint           执行检查广泛的DBMS版本指纹</code></pre>
+<p>  Enumeration（枚举）:</p>
+<pre><code>These options can be used to enumerate the back-end database
+management system information, structure and data contained in the
+tables. Moreover you can run your own SQL statements                  
+这些选项可以用来列举后端数据库管理系统的信息、表中的结构和数据。此外，您还可以运行您自己的SQL语句。  
+
+-a, --all           Retrieve everything                             检索一切
+-b, --banner        Retrieve DBMS banner                            检索数据库管理系统的标识  
+--current-user      Retrieve DBMS current user                      检索数据库管理系统的标识  
+--current-db        Retrieve DBMS current database                  检索数据库管理系统当前数据库  
+--hostname          Retrieve DBMS server hostname                   检索数据库服务器的主机名
+--is-dba            Detect if the DBMS current user is DBA          检测DBMS当前用户是否DBA  
+--users             Enumerate DBMS users                            枚举数据库管理系统用户
+--passwords         Enumerate DBMS users password hashes            枚举数据库管理系统用户密码哈希
+--privileges        Enumerate DBMS users privileges                 枚举数据库管理系统用户的权限  
+--roles             Enumerate DBMS users roles                      枚举数据库管理系统用户的角色  
+--dbs               Enumerate DBMS databases                        枚举数据库管理系统数据库
+--tables            Enumerate DBMS database tables                  枚举的DBMS数据库中的表  
+--columns           Enumerate DBMS database table columns           枚举DBMS数据库表列
+--schema            Enumerate DBMS schema                           枚举数据库架构
+--count             Retrieve number of entries for table(s)         检索表的条目数
+--dump              Dump DBMS database table entries                转储数据库管理系统的数据库中的表项
+--dump-all          Dump all DBMS databases tables entries               转储数据库管理系统的数据库中的表项
+--search            Search column(s), table(s) and/or database name(s)   搜索列（S），表（S）和/或数据库名称（S）
+--comments          Retrieve DBMS comments                               检索数据库的comments(注释、评论)
+-D DB               DBMS database to enumerate                           要进行枚举的数据库名 
+-T TBL              DBMS database table(s) to enumerate                  要进行枚举的数据库表
+-C COL              DBMS database table column(s) to enumerate           要进行枚举的数据库列 
+-X EXCLUDECOL       DBMS database table column(s) to not enumerate       要不进行枚举的数据库列 
+-U USER             DBMS user to enumerate                               用来进行枚举的数据库用户 
+--exclude-sysdbs    Exclude DBMS system databases when enumerating tables   枚举表时排除系统数据库 
+--pivot-column=P..  Pivot column name                                       主列名称
+--where=DUMPWHERE   Use WHERE condition while table dumping                 使用WHERE条件进行表转储
+--start=LIMITSTART  First query output entry to retrieve                    第一个查询输出进入检索
+--stop=LIMITSTOP    Last query output entry to retrieve                     最后查询的输出进入检索
+--first=FIRSTCHAR   First query output word character to retrieve           第一个查询输出字的字符检索 
+--last=LASTCHAR     Last query output word character to retrieve            最后查询的输出字字符检索 
+--sql-query=QUERY   SQL statement to be executed                            要执行的SQL语句
+--sql-shell         Prompt for an interactive SQL shell                     提示交互式SQL的shell
+--sql-file=SQLFILE  Execute SQL statements from given file(s)               从给定文件执行SQL语句</code></pre>
+<p>  Brute force（蛮力）:</p>
+<pre><code>These options can be used to run brute force checks         这些选项可以被用来运行蛮力检查。
+
+--common-tables     Check existence of common tables        检查存在共同表 
+--common-columns    Check existence of common columns       检查存在共同列</code></pre>
+<p>  User-defined function injection（用户自定义函数注入）:<br>​    These options can be used to create custom user-defined functions   这些选项可以用来创建用户自定义函数。</p>
+<pre><code>--udf-inject        Inject custom user-defined functions        注入用户自定义函数  
+--shared-lib=SHLIB  Local path of the shared library            共享库的本地路径 </code></pre>
+<p>  File system access（访问文件系统）:</p>
+<pre><code>These options can be used to access the back-end database management      
+system underlying file system
+这些选项可以被用来访问后端数据库管理系统的底层文件系统。
+
+--file-read=RFILE   Read a file from the back-end DBMS file system        从后端的数据库管理系统文件系统读取文件  
+--file-write=WFILE  Write a local file on the back-end DBMS file system   编辑后端的数据库管理系统文件系统上的本地文件
+--file-dest=DFILE   Back-end DBMS absolute filepath to write to           后端的数据库管理系统写入文件的绝对路径</code></pre>
+<p>  Operating system access（操作系统访问）:</p>
+<pre><code>These options can be used to access the back-end database management
+system underlying operating system  
+这些选项可以用于访问后端数据库管理系统的底层操作系统。
+
+--os-cmd=OSCMD      Execute an operating system command                     执行操作系统命令 
+--os-shell          Prompt for an interactive operating system shell        交互式的操作系统的shell
+--os-pwn            Prompt for an OOB shell, Meterpreter or VNC             获取一个OOB shell，meterpreter或VNC 
+--os-smbrelay       One click prompt for an OOB shell, Meterpreter or VNC   一键获取一个OOB shell，meterpreter或VNC 
+--os-bof            Stored procedure buffer overflow exploitation           存储过程缓冲区溢出利用
+--priv-esc          Database process user privilege escalation              数据库进程用户权限提升
+--msf-path=MSFPATH  Local path where Metasploit Framework is installed      Metasploit Framework本地的安装路径
+--tmp-path=TMPPATH  Remote absolute path of temporary files directory       远程临时文件目录的绝对路径</code></pre>
+<p>  Windows registry access（Windows注册表访问）:</p>
+<pre><code>These options can be used to access the back-end database management
+system Windows registry     
+这些选项可以被用来访问后端数据库管理系统Windows注册表。
+
+--reg-read          Read a Windows registry key value           读一个Windows注册表项值
+--reg-add           Write a Windows registry key value data     写一个Windows注册表项值数据
+--reg-del           Delete a Windows registry key value         删除Windows注册表键值
+--reg-key=REGKEY    Windows registry key                        Windows注册表键 
+--reg-value=REGVAL  Windows registry key value                  Windows注册表项值 
+--reg-data=REGDATA  Windows registry key value data             Windows注册表键值数据  
+--reg-type=REGTYPE  Windows registry key value type             Windows注册表项值类型</code></pre>
+<p>  General（一般）:</p>
+<pre><code>These options can be used to set some general working parameters    这些选项可以用来设置一些一般的工作参数。 
+
+-s SESSIONFILE      Load session from a stored (.sqlite) file                   保存和恢复检索会话文件的所有数据
+-t TRAFFICFILE      Log all HTTP traffic into a textual file                    记录所有HTTP流量到一个文本文件中
+--batch             Never ask for user input, use the default behaviour         从不询问用户输入，使用所有默认配置。 
+--binary-fields=..  Result fields having binary values (e.g. &quot;digest&quot;)          具有二进制值的结果字段
+--charset=CHARSET   Force character encoding used for data retrieval            强制用于数据检索的字符编码
+--crawl=CRAWLDEPTH  Crawl the website starting from the target URL              从目标网址开始抓取网站
+--crawl-exclude=..  Regexp to exclude pages from crawling (e.g. &quot;logout&quot;)       正则表达式排除网页抓取
+--csv-del=CSVDEL    Delimiting character used in CSV output (default &quot;,&quot;)       分隔CSV输出中使用的字符
+--dump-format=DU..  Format of dumped data (CSV (default), HTML or SQLITE)       转储数据的格式
+--eta               Display for each output the estimated time of arrival       显示每个输出的预计到达时间
+--flush-session     Flush session files for current target                      刷新当前目标的会话文件
+--forms             Parse and test forms on target URL                          在目标网址上解析和测试表单
+--fresh-queries     Ignore query results stored in session file                 忽略在会话文件中存储的查询结果
+--hex               Use DBMS hex function(s) for data retrieval                 使用DBMS hex函数进行数据检索
+--output-dir=OUT..  Custom output directory path                                自定义输出目录路径
+--parse-errors      Parse and display DBMS error messages from responses        解析和显示响应中的DBMS错误消息
+--save=SAVECONFIG   Save options to a configuration INI file                    保存选项到INI配置文件
+--scope=SCOPE       Regexp to filter targets from provided proxy log            使用正则表达式从提供的代理日志中过滤目标
+--test-filter=TE..  Select tests by payloads and/or titles (e.g. ROW)           根据有效负载和/或标题(e.g. ROW)选择测试
+--test-skip=TEST..  Skip tests by payloads and/or titles (e.g. BENCHMARK)       根据有效负载和/或标题跳过测试（e.g. BENCHMARK）
+--update            Update sqlmap                                                更新SqlMap</code></pre>
+<p>  Miscellaneous（杂项）:</p>
+<pre><code>-z MNEMONICS        Use short mnemonics (e.g. &quot;flu,bat,ban,tec=EU&quot;)         使用简短的助记符
+--alert=ALERT       Run host OS command(s) when SQL injection is found      在找到SQL注入时运行主机操作系统命令
+--answers=ANSWERS   Set question answers (e.g. &quot;quit=N,follow=N&quot;)           设置问题答案
+--beep              Beep on question and/or when SQL injection is found     发现SQL注入时提醒
+--cleanup           Clean up the DBMS from sqlmap specific UDF and tables   SqlMap具体的UDF和表清理DBMS 
+--dependencies      Check for missing (non-core) sqlmap dependencies        检查是否缺少（非内核）sqlmap依赖关系
+--disable-coloring  Disable console output coloring                         禁用控制台输出颜色
+--gpage=GOOGLEPAGE  Use Google dork results from specified page number      使用Google dork结果指定页码
+--identify-waf      Make a thorough testing for a WAF/IPS/IDS protection    对WAF / IPS / IDS保护进行全面测试
+--skip-waf          Skip heuristic detection of WAF/IPS/IDS protection      跳过启发式检测WAF / IPS / IDS保护
+--mobile            Imitate smartphone through HTTP User-Agent header       通过HTTP User-Agent标头模仿智能手机
+--offline           Work in offline mode (only use session data)            在离线模式下工作（仅使用会话数据）
+--page-rank         Display page rank (PR) for Google dork results          Google dork结果显示网页排名（PR）
+--purge-output      Safely remove all content from output directory         安全地从输出目录中删除所有内容
+--smart             Conduct thorough tests only if positive heuristic(s)    只有在正启发式时才进行彻底测试
+--sqlmap-shell      Prompt for an interactive sqlmap shell                  提示交互式sqlmap shell
+--wizard            Simple wizard interface for beginner users              给初级用户的简单向导界面</code></pre>
+</div><div class="article-licensing box"><div class="licensing-title"><p>sqlmap帮助文档</p><p><a href="https://www.se7ensec.cn/2018/08/08/sqlmap%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/">https://www.se7ensec.cn/2018/08/08/sqlmap%E5%B8%AE%E5%8A%A9%E6%96%87%E6%A1%A3/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Se7en</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2018-08-08</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-02-08</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/Sqlmap/">Sqlmap</a></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2018/09/12/Access%E5%AE%9E%E4%BE%8B%E6%B3%A8%E5%85%A5%E7%AC%94%E8%AE%B0/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">Access实例注入笔记</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2018/07/27/%E6%88%91%E4%BB%AC%E6%9D%A5%E7%BB%99%E7%94%B5%E5%96%B5%E7%BC%96%E4%B8%AA%E6%95%85%E4%BA%8B%E5%90%A7/"><span class="level-item">我们来给电喵编个故事吧</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="lv-container" data-id="city" data-uid="MTAyMC80MDkwNy8xNzQzMg=="><script>(function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');</script><noscript>Please activate JavaScript for write a comment in LiveRe</noscript></div></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2020/09/30/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Mail-Probe%E9%82%AE%E7%AE%B1%E6%8E%A2%E9%92%88%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"><img src="https://raw.githubusercontent.com/r00tSe7en/Mail-Probe/master/tz0.png" alt="鱼叉攻击|Mail-Probe 邮箱探针后台管理系统"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-09-30T04:10:24.000Z">2020-09-30</time></p><p class="title"><a href="/2020/09/30/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Mail-Probe%E9%82%AE%E7%AE%B1%E6%8E%A2%E9%92%88%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">鱼叉攻击|Mail-Probe 邮箱探针后台管理系统</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/09/14/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB-Flash%E9%92%93%E9%B1%BC%E5%BC%B9%E7%AA%97%E4%BC%98%E5%8C%96%E7%89%88/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/flashpop.png" alt="水坑攻击|Flash钓鱼弹窗优化版"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-09-14T04:10:24.000Z">2020-09-14</time></p><p class="title"><a href="/2020/09/14/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB-Flash%E9%92%93%E9%B1%BC%E5%BC%B9%E7%AA%97%E4%BC%98%E5%8C%96%E7%89%88/">水坑攻击|Flash钓鱼弹窗优化版</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/26/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E5%9F%BA%E4%BA%8Ewinrm%E7%9A%84%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.07.12/who-am-i.jpg" alt="内网渗透|基于winRM的横向移动"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-26T14:10:24.000Z">2020-08-26</time></p><p class="title"><a href="/2020/08/26/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E5%9F%BA%E4%BA%8Ewinrm%E7%9A%84%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/">内网渗透|基于winRM的横向移动</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/24/%E8%82%BE%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B8%AD%E5%BF%83/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.08.24/1.png" alt="在线肾透测试中心"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-24T14:10:24.000Z">2020-08-24</time></p><p class="title"><a href="/2020/08/24/%E8%82%BE%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B8%AD%E5%BF%83/">在线肾透测试中心</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/22/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Lnk%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%A6%E7%B1%BB%E9%92%93%E9%B1%BC%E6%96%B9%E5%BC%8F/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.08.22/1.jpg" alt="鱼叉攻击|使用Lnk文件的另类钓鱼方式"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-22T07:10:24.000Z">2020-08-22</time></p><p class="title"><a href="/2020/08/22/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Lnk%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%A6%E7%B1%BB%E9%92%93%E9%B1%BC%E6%96%B9%E5%BC%8F/">鱼叉攻击|使用Lnk文件的另类钓鱼方式</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"><span class="level-start"><span class="level-item">渗透测试</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">生活随笔</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/00%E6%88%AA%E6%96%AD/"><span class="tag">00截断</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BurpSuite/"><span class="tag">BurpSuite</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BypassAV/"><span class="tag">BypassAV</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GetShell/"><span class="tag">GetShell</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PHP/"><span class="tag">PHP</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL%E6%B3%A8%E5%85%A5/"><span class="tag">SQL注入</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Short-filename/"><span class="tag">Short filename</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sqlmap/"><span class="tag">Sqlmap</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WIN%E6%8F%90%E6%9D%83/"><span class="tag">WIN提权</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XSS/"><span class="tag">XSS</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E6%98%9F%E6%9C%9F%E5%AE%9E%E6%88%98%E6%80%BB%E7%BB%93/"><span class="tag">一星期实战总结</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"><span class="tag">内网渗透</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/"><span class="tag">小技巧</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"><span class="tag">文件上传</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%85%E8%A1%8C/"><span class="tag">旅行</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="tag">暴力破解</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB/"><span class="tag">水坑攻击</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E9%9F%B3/"><span class="tag">电音</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F/"><span class="tag">端口渗透</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"><span class="tag">网站建设</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95/"><span class="tag">网络安全法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/"><span class="tag">解析漏洞</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9A%8F%E6%83%B3/"><span class="tag">随想</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/"><span class="tag">面试经验</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB/"><span class="tag">鱼叉攻击</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="Se7en&#039;s Blog|资深apt install专家。" height="28"></a><p class="is-size-7"><span>&copy; 2020 Se7en</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div><center><a>Copyright © 2016 - 2020 All Rights Reserved. </a><a target="_blank" rel="noopener" href="http://icp.chinaz.com/info?q=se7ensec.cn">冀ICP备16029197号</a></center><center><script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5ge9mqezqta&amp;amp;d=2&amp;amp;p=2&amp;amp;b=1&amp;amp;w=293&amp;amp;g=2&amp;amp;f=arial&amp;amp;fs=12&amp;amp;r=0&amp;amp;c0=ffffff&amp;amp;c1=007eff&amp;amp;c2=000000&amp;amp;ic0=0&amp;amp;ic1=0" async="async"></script></center></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>

