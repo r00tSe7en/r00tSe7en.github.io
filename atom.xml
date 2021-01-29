@@ -6,7 +6,7 @@
   <link href="https://www.se7ensec.cn/atom.xml" rel="self"/>
   
   <link href="https://www.se7ensec.cn/"/>
-  <updated>2021-01-23T14:13:50.651Z</updated>
+  <updated>2021-01-29T19:12:11.914Z</updated>
   <id>https://www.se7ensec.cn/</id>
   
   <author>
@@ -17,17 +17,17 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>有一天你变成了别人眼中的自己</title>
-    <link href="https://www.se7ensec.cn/2020/11/26/%E6%9C%89%E4%B8%80%E5%A4%A9%E4%BD%A0%E5%8F%98%E6%88%90%E4%BA%86%E5%88%AB%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%B7%B1/"/>
-    <id>https://www.se7ensec.cn/2020/11/26/%E6%9C%89%E4%B8%80%E5%A4%A9%E4%BD%A0%E5%8F%98%E6%88%90%E4%BA%86%E5%88%AB%E4%BA%BA%E7%9C%BC%E4%B8%AD%E7%9A%84%E8%87%AA%E5%B7%B1/</id>
-    <published>2020-11-26T02:16:18.000Z</published>
-    <updated>2021-01-23T14:13:50.651Z</updated>
+    <title>2020年度总结</title>
+    <link href="https://www.se7ensec.cn/2021/01/30/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
+    <id>https://www.se7ensec.cn/2021/01/30/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
+    <published>2021-01-29T17:16:18.000Z</published>
+    <updated>2021-01-29T19:12:11.914Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>你永远不知道自己有多好，一直想变成别人眼中更好的自己。</p></blockquote><a id="more"></a><p>小的时侯和父母去小卖部，总会出现这么一段对话：</p><p>​    父母：”有什么想买的好吃的嘛？“<br>​    我：”没有想买的。“<br>​    小卖部老板：”这孩子真懂事，哈哈哈，还知道省着钱。“</p><p>那时候的我其实对金钱还没有什么概念，只是慢慢的觉的这样做身边的人会很高兴，也许从那时起就学会了如何抑制自己的欲望。</p><p>这些年渐渐的发现，自己培养出了一种讨好型人格。大概就是，不希望让和自己相处的人感到失望，不希望别人对自己有偏见，哪怕去做一些并不是很喜欢去做的事情，开始变得越来越压抑，那些理解的、不理解的、羡慕的、鄙夷的、仰望的、嫌弃的，一道道来自他人的目光，成为了我喜怒哀乐的理由。</p><p><img src="https://gitee.com/r00tSe7en/pictures/raw/master/2020.11.26/2.jpg"></p><p>自己有时候也感到很迷茫，是自己在逼着自己变得更好嘛？还是为了变成父母、亲人、挚爱、朋友……满意的样子？</p><p>或许是每个人都是有两个自我，一个是外在呈现，一个是内在呈现，这两个自我相互矛盾。</p><p>举个挺常见的例子，比如你外在看起来开朗乐观，喜欢跟朋友聚会玩耍，可以很容易的和每个人交朋友，但是内在大多时候却有些孤独，希望有一点独处的时间……</p><p><img src="https://gitee.com/r00tSe7en/pictures/raw/master/2020.11.26/1.jpg"></p><p>现在再来想一想，如果剥离掉所有的附加价值，我会是谁？我所追求的一切，到底是自己真正想要的，还是为了满足别人的意愿驱使而追求的？没有任何外在标签的我，双脚是否还能踩在大地上，感受到自己的存在？</p><p>人啊，真是个奇怪的动物。</p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=22821100&auto=1&height=66"></iframe>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>流水账啊流水账。</p></blockquote><a id="more"></a><p><img src="https://gitee.com/r00tSe7en/pictures/raw/master/2021.01.30/1.jpg"></p><h1 id="2020的收获"><a href="#2020的收获" class="headerlink" title="2020的收获"></a>2020的收获</h1><p>从外围打点到后渗透有了一个更加系统和深入的理解。</p><p>实现了一套有着自己独到见解且相对完善的渗透测试体系。</p><p>从0到1拓展了内网渗透、木马免杀、权限维持的新技能，感谢指引方向的老大，感谢志同道合的群友们。</p><p>代码审计有了些许进步，可以跟一下框架类的了。</p><h1 id="2021的目标"><a href="#2021的目标" class="headerlink" title="2021的目标"></a>2021的目标</h1><p>其实这算是2020的遗憾吧，没有去学习下一些java相关的漏洞原理，一直以来也比较欠缺，今年可以补充下这方面的知识。</p><p>还是要多写代码，其余的更加精进。</p><p>少就是多，慢就是快，多做笔记，温故知新。</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>马上就要放年假了，希望可以顺利回家，然后顺利回来，哈哈哈。</p>]]></content>
     
     
     <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;你永远不知道自己有多好，一直想变成别人眼中更好的自己。&lt;/p&gt;
+&lt;p&gt;流水账啊流水账。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
