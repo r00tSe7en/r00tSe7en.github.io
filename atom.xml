@@ -6,7 +6,7 @@
   <link href="https://www.se7ensec.cn/atom.xml" rel="self"/>
   
   <link href="https://www.se7ensec.cn/"/>
-  <updated>2021-06-19T07:51:15.361Z</updated>
+  <updated>2021-09-27T11:49:31.249Z</updated>
   <id>https://www.se7ensec.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Go语言学习笔记</title>
+    <link href="https://www.se7ensec.cn/2021/09/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>https://www.se7ensec.cn/2021/09/27/Go%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</id>
+    <published>2021-09-27T00:16:18.000Z</published>
+    <updated>2021-09-27T11:49:31.249Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>开个坑，慢慢填</p></blockquote><a id="more"></a>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;开个坑，慢慢填&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="渗透测试" scheme="https://www.se7ensec.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="Golang" scheme="https://www.se7ensec.cn/tags/Golang/"/>
+    
+  </entry>
   
   <entry>
     <title>内网渗透|内网传输通道的建立</title>
@@ -90,14 +113,12 @@
     <link href="https://www.se7ensec.cn/2021/01/30/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
     <id>https://www.se7ensec.cn/2021/01/30/2020%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
     <published>2021-01-29T17:16:18.000Z</published>
-    <updated>2021-01-29T19:12:11.914Z</updated>
+    <updated>2021-09-27T11:33:05.795Z</updated>
     
-    <content type="html"><![CDATA[<blockquote><p>流水账啊流水账。</p></blockquote><a id="more"></a><p><img src="https://gitee.com/r00tSe7en/pictures/raw/master/2021.01.30/1.jpg"></p><h1 id="2020的收获"><a href="#2020的收获" class="headerlink" title="2020的收获"></a>2020的收获</h1><p>从外围打点到后渗透有了一个更加系统和深入的理解。</p><p>实现了一套有着自己独到见解且相对完善的渗透测试体系。</p><p>从0到1拓展了内网渗透、木马免杀、权限维持的新技能，感谢指引方向的老大，感谢志同道合的群友们。</p><p>代码审计有了些许进步，可以跟一下框架类的了。</p><h1 id="2021的目标"><a href="#2021的目标" class="headerlink" title="2021的目标"></a>2021的目标</h1><p>其实这算是2020的遗憾吧，没有去学习下一些java相关的漏洞原理，一直以来也比较欠缺，今年可以补充下这方面的知识。</p><p>还是要多写代码，其余的更加精进。</p><p>少就是多，慢就是快，多做笔记，温故知新。</p><h1 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h1><p>马上就要放年假了，希望可以顺利回家，然后顺利回来，哈哈哈。</p>]]></content>
+    <content type="html"><![CDATA[<div id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">  <div class="hbe-input-container">  <input type="password" id="hbePass" placeholder="" />    <label for="hbePass">Hey, password is required here.</label>    <div class="bottom-line"></div>  </div>  <script id="hbeData" type="hbeData" data-hmacdigest="cb11856a4897e7fc052c442efe3fc22364a64b10146d15984104d66e27290427">ff41d9ed7da0c90bb8315e296c2afdc7e5ee23f1c3e49d2449c84df883ef80e7f3e4ffff36be0b9a51ad072802f294a5efd4fd268166a5cba83ce0fce882680f287ddb4c54b0c4532a7ddcad5eb9c573c6bb64efaafb02562e9ffcf4522630252c90aad4047d37775cae6601b1885e2e76878db60da51a9303fe5b8268540fbfa5e4a3a8a3805ab3bb63d08e17704a1278825317c0dec3dbfa14349fe6f85bff1485d90b6fc07f2a61de713404035785efb9df37b52df0c88d0efc9f8fdfe7ecdf88d3c065b601a2c9744a2d98ed93717e83ed2802139b43db8613911049b8b1fd82bfc9abdc4e3ac70a70479c1d3f7375d80a846e23e33209fc02fb1dedad7981b4d84c2e708ba44739b17eb730180e1d61de840633cb7839fd4ed55c2b2757247b596428d235357dbedce6a2d539da9dfc46278590a6f1fdc0752da647093e9efb91ce7244fa4c575992be05c7314d3aadabb273fa2751c137d6ea2e7976b17f3406d92d7fa7f73e9e2523029f20e51dcbb992a7169d904cc0b285326dc32eb47c71c92f0bccbd38392e3ee3168de2502a845e9ae080f0e404ffa46dadc767133d5dbf17ddd9d47b88d50c301e578c54b48c413471caa35bd0ca211cd476677efd16ca064b40a2a655ccc2977d70cb7489f67d92c2ba2032889f9d5e03eec14d8e4b4d43ccea49c948aad45cf77cfa4e793006b5fae55547f2cbdcbb362042219ba9f55bb419500d393aeb957652a88fe0d9a61bd6bbc353e50ba81dbf6291379ee628ef5000d494dd13a31a9c13a05e3a5b3455b2fdae2990eca457bcfacb0abd79b10a42a5b686b5e85f1586fe691658c9a43a10dc41120131ec4794f1896f0ab7a00041b13b61966d0b381729515b4d3d77c1c11a6e8728f43e3821796cd5679eeef0ede6b94a3e71eeeb13838773802d1b7660eacc64bdc026e428674b5b9d31ed2e994fba587e0604260adb65d80ae325eae422ac0b3fe4da4f5dacea2911226080c1cb5279acaa48c1a050b580dc63c539b409962bb869b75d3386bba230a24033ccbcc9ed3ea9d65dc4fe54e37bb1596fc5f2853dbec77670110375f52f974c2c3015cc62d10aaec01e1b286c60da8abe59040ea2631b50e131cf2b86c4a0636f47719931b21a5288d7d63b24250d9f72da67890b6f5f0f15efc7fb14580b10c9f88676846df8a83db5a5bdfa0242d486a1c84b5160b7e4a6f4f3b31eed7405f4c7f4fea6c32816cbc24adacf63d8ade469219cdd109167ca5597fe80ea37b979a507f02523082a508812f1604772c85e1b8c94acd6d35a8b963a34d4d83c82b9e97d6f0cc110de131106ac70a35118221d852a3c75029c3c683176c2fe4d50d9880a0d71a1cdb66d88f5a0bf145865a9905d44fc7530ae84685f6341be31e3587e965351bb4745f746d305d0e91d24febcaf91a68f7ef698be7e27fbd71881a28ba906a2df5501aa1de2a88cec459bc0aadc1c3ce83e612030d3b0f48677eddfaf738fd9559835ad7e1702aa048502935c25aedfb043a8b160284325e11ad8b8b401f8bc03b0e5fb4d155ce4a6219f7dff1007a8e2402c642baaa5d1b73bc04cd4d8760b296b30c37982df47fbd594f2f8dbaf3d8a84d0df96210ac0d5161854c8c98c05e33eb0879308cfee0937d477e121326e00b0d210c592610d7c448eeaf9a427bb52d42b164c6fff37ec24bbe43064ce6a406c492675d0c30c748810198b36290a63ddfcf847a3e231a7d268cf44f9cec3005ebed3178f5e</script></div><script src="/lib/blog-encrypt.js"></script><link href="/css/blog-encrypt.css" rel="stylesheet" type="text/css">]]></content>
     
     
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;流水账啊流水账。&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
+    <summary type="html">Here&#39;s something encrypted, password is required to continue reading.</summary>
     
     
     
@@ -446,29 +467,6 @@
     
     <summary type="html">&lt;blockquote&gt;
 &lt;p&gt;安全技术学习，承认自己的弱点不是丑事。&lt;br&gt;只有对原理了然于心，才能突破更多的限制。        ——@ringzero &lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="生活随笔" scheme="https://www.se7ensec.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随想" scheme="https://www.se7ensec.cn/tags/%E9%9A%8F%E6%83%B3/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>迟来的年度总结</title>
-    <link href="https://www.se7ensec.cn/2020/01/09/%E8%BF%9F%E6%9D%A5%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/"/>
-    <id>https://www.se7ensec.cn/2020/01/09/%E8%BF%9F%E6%9D%A5%E7%9A%84%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</id>
-    <published>2020-01-08T18:15:44.000Z</published>
-    <updated>2021-01-23T14:13:50.651Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>不知道现在写年度总结是不是晚了点。</p></blockquote><a id="more"></a><p>2019</p><p>2019年，一切都顺顺利利，做了人生第一份实习工作，进了一些交流的小圈子，认识了些真正的”师傅”，通过论坛，公众号，QQ、微信群、小密圈等各种渠道，每天都能被动、主动的学习到各种思路和知识，做了些技术沉淀，但还是总会感觉欠缺一些东西，那就是自己的定位和发展方向。</p><p>渗透测试这条路当初既然选择了就要坚持走下去，面临知识面”深度”和”广度”的发展问题，一直是我比较迷茫的问题。</p><p>选择”深度”</p><p>找一个领域，深入研究，争取几年以后达到一定境界，最好是这个领域中相对领先的位置，但是感觉自己又没这么聪明，一直以来的学习，都是在模仿已有的东西，自己研究的少之又少。</p><p>选择”广度”</p><p>这更适合工作场景中的需求，为了达到目标要求，不择手段，需要大量的实战经验和知识面来做支撑，难易程度一点不亚于前者，或者更甚。搞渗透测试要考虑的也是一个面，要做的就是在面上找一个突破点，这个突破点不应仅仅局限在web上，所以自然而然的就要去了解一些特别的攻击手法，这也就是为什么会有”广度”的存在。这种感觉尤其在我看到的、了解的东西多了之后就越发的清晰了。</p><p>2020</p><p>我的答案</p><p>最近在关注一个用匿名ID的师傅写的博客，匿名可能是工作性质的原因吧，里面记录的那些内容，读完多多少少有一些共鸣，自己也找到了问题的答案，一名合格的”黑客”，在必须追求”广度”的同时，还应该合理发展自己的”深度”，这两个实际上是不冲突的，只不过是要多付出一些精力在自己比较擅长的方向，坚持做下去，耐心点总会做出成绩。</p><p>未来计划</p><p>会继续修炼web（入门容易深入难）</p><p>拓展内网渗透这个新的方向（横向，免杀，维权）</p><p>Python（思路清晰，编码高效）</p><p>最终目标</p><p>争取实现一套有着自己独到见解且相对完善的渗透测试体系</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;不知道现在写年度总结是不是晚了点。&lt;/p&gt;
 &lt;/blockquote&gt;</summary>
     
     
