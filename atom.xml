@@ -6,7 +6,7 @@
   <link href="https://www.se7ensec.cn/atom.xml" rel="self"/>
   
   <link href="https://www.se7ensec.cn/"/>
-  <updated>2021-09-29T10:49:21.332Z</updated>
+  <updated>2021-09-29T11:03:02.527Z</updated>
   <id>https://www.se7ensec.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>域渗透|Kerberos域认证刨析</title>
+    <link href="https://www.se7ensec.cn/2021/09/29/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E5%88%A8%E6%9E%90/"/>
+    <id>https://www.se7ensec.cn/2021/09/29/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E5%88%A8%E6%9E%90/</id>
+    <published>2021-09-29T07:10:24.000Z</published>
+    <updated>2021-09-29T11:03:02.527Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Kerberos域认证刨析</p></blockquote><a id="more"></a><p>开个坑，空闲时间填。</p>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Kerberos域认证刨析&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="渗透测试" scheme="https://www.se7ensec.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="域渗透" scheme="https://www.se7ensec.cn/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>Go语言学习笔记</title>
@@ -453,29 +476,6 @@
     
     
     <category term="XSS" scheme="https://www.se7ensec.cn/tags/XSS/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>回炉再造</title>
-    <link href="https://www.se7ensec.cn/2020/01/20/%E5%9B%9E%E7%82%89%E5%86%8D%E9%80%A0/"/>
-    <id>https://www.se7ensec.cn/2020/01/20/%E5%9B%9E%E7%82%89%E5%86%8D%E9%80%A0/</id>
-    <published>2020-01-20T07:15:15.000Z</published>
-    <updated>2021-01-23T14:13:50.667Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>安全技术学习，承认自己的弱点不是丑事。<br>只有对原理了然于心，才能突破更多的限制。        ——@ringzero </p></blockquote><a id="more"></a><p>一二三四，二二三四，转个圈圈，再来一次。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;安全技术学习，承认自己的弱点不是丑事。&lt;br&gt;只有对原理了然于心，才能突破更多的限制。        ——@ringzero &lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="生活随笔" scheme="https://www.se7ensec.cn/categories/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/"/>
-    
-    
-    <category term="随想" scheme="https://www.se7ensec.cn/tags/%E9%9A%8F%E6%83%B3/"/>
     
   </entry>
   
