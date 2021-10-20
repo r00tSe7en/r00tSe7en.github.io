@@ -6,7 +6,7 @@
   <link href="https://www.se7ensec.cn/atom.xml" rel="self"/>
   
   <link href="https://www.se7ensec.cn/"/>
-  <updated>2021-10-20T15:59:47.470Z</updated>
+  <updated>2021-10-20T17:55:59.493Z</updated>
   <id>https://www.se7ensec.cn/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>域渗透|Kerberos域认证机制刨析</title>
+    <link href="https://www.se7ensec.cn/2021/10/20/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6%E5%88%A8%E6%9E%90/"/>
+    <id>https://www.se7ensec.cn/2021/10/20/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E6%9C%BA%E5%88%B6%E5%88%A8%E6%9E%90/</id>
+    <published>2021-10-20T10:10:24.000Z</published>
+    <updated>2021-10-20T17:55:59.493Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Kerberos域认证机制刨析</p></blockquote><a id="more"></a><h1 id="Kerberos概念"><a href="#Kerberos概念" class="headerlink" title="Kerberos概念"></a>Kerberos概念</h1><p>Kerberos是一种网络认证协议，其设计目标是通过密钥系统为<code>Client / Server</code>应用程序提供强大的认证服务。该认证过程的实现不依赖于主机操作系统的认证，无需基于主机地址的信任，不要求网络上所有主机的物理安全，并假定网络上传送的数据包可以被任意地读取、修改和插入数据。</p><p>在以上情况下， Kerberos作为一种可信任的第三方认证服务，是通过传统的密码技术(如:共享 密钥)执行认证服务的。</p><h1 id="域认证所参与的角色"><a href="#域认证所参与的角色" class="headerlink" title="域认证所参与的角色"></a>域认证所参与的角色</h1><blockquote><p>Kerberos的标志是三只狗头，狗头分别代表以下三个角色</p></blockquote><ul><li><ol><li>访问服务的Client</li></ol></li><li><ol start="2"><li>提供服务的Server</li></ol></li><li><ol start="3"><li>KDC（Key Distribution Center）密钥分发中心 kerberos 测试工具介绍</li></ol></li></ul><p>其中KDC服务默认会安装在一个域的域控中，而<code>Client</code>和<code>Server</code>为域内的用户或者是服务，如<code>HTTP服务</code>，<code>SQL服务</code>。在<code>Kerberos</code>中<code>Client</code>是否有权限访问<code>Server</code>端的服务由<code>KDC(Key Distribution Center)</code>发放的票据来决定。</p><h1 id="Kerberos认证协议"><a href="#Kerberos认证协议" class="headerlink" title="Kerberos认证协议"></a>Kerberos认证协议</h1><h2 id="TGT（Ticket-Granting-Ticket）"><a href="#TGT（Ticket-Granting-Ticket）" class="headerlink" title="TGT（Ticket Granting Ticket）"></a>TGT（Ticket Granting Ticket）</h2><blockquote><p>由身份认证服务<code>AS(Authentication Service)</code>授予的票据，<code>TGT</code>用于身份认证，存储在内存，<strong>默认有效期为10小时</strong>，通过<code>TGT</code>能够获得<code>票据（Ticket）</code>，<code>TGT</code>是一种 <strong>临时凭证</strong> 的存在，又被称为 <strong>黄金票据</strong>。</p></blockquote><h2 id="票据（Server-Ticket-Ticket）"><a href="#票据（Server-Ticket-Ticket）" class="headerlink" title="票据（Server Ticket/Ticket）"></a>票据（Server Ticket/Ticket）</h2><blockquote><p>是网络对象互相访问的 <strong>凭证</strong>，又被称为 <strong>白银票据</strong>。</p></blockquote><h2 id="KDC-Key-Distribution-Center"><a href="#KDC-Key-Distribution-Center" class="headerlink" title="KDC(Key Distribution Center)"></a>KDC(Key Distribution Center)</h2><blockquote><p>负责管理票据、认证票据、分发票据，但是<code>KDC</code>不是一个独立的服务，它由以下服务组成：</p></blockquote><blockquote><ul><li><strong>AS(Authentication Service)</strong>: 身份认证服务，为<code>Client</code>生成<code>TGT(Ticket Granting Ticket)</code>的服务，<code>TGT</code>又被称为 <strong>黄金票据</strong>。</li><li><strong>TGS(Ticket Granting Service)</strong>: 票据授予服务，该服务为<code>Client</code>生成某个服务的<code>Ticket</code>，<code>Ticket</code>又被称为 <strong>白银票据</strong>。</li></ul></blockquote><h2 id="AD-Account-Database"><a href="#AD-Account-Database" class="headerlink" title="AD(Account Database)"></a>AD(Account Database)</h2><blockquote><p>一个类似于本机<code>SAM</code>的一个数据库，存储所有<code>Client</code>的白名单，只有存在于白名单的<code>Client</code>才能顺利申请到<code>TGT</code>。</p></blockquote><p><strong>※补充：从物理层面看，AD与KDC均为域控制器(Domain Controller)。</strong></p><h1 id="域认证粗略流程"><a href="#域认证粗略流程" class="headerlink" title="域认证粗略流程"></a>域认证粗略流程</h1><h2 id="过程简述"><a href="#过程简述" class="headerlink" title="过程简述"></a>过程简述</h2><p>①-②：<code>Client</code>向<code>kerberos</code>服务请求，希望获取访问<code>Server</code>的权限。 <code>kerberos</code>得到了这个消息，首先得判断<code>Client</code>是否是可信赖的， 也就是白名单黑名单的说法。</p><p>这就是<code>AS(Authentication Service)</code>服务完成的工作，通过在<code>AD(Account Database)</code>中存储黑名单和白名单来区分<code>Client</code>。</p><p>成功后，返回<code>AS(Authentication Service)</code>返回<code>TGT（Ticket Granting Ticket）</code>给<code>Client</code>。</p><p>③-④：<code>Client</code>得到了<code>TGT（Ticket Granting Ticket）</code>后，继续向<code>kerberos</code>请求，希望获取访问 <code>Server</code>的权限。<code>kerberos</code>又得到了这个消息，这时候通过<code>Client </code>消息中的<code>TGT</code>，判断出了<code>Client</code>拥有了这个权限，给了<code>Client</code>访问<code>Server</code>的权限<code>Ticket</code>。</p><p>⑤-⑥：<code>Client</code>得到<code>Ticket</code>后，终于可以成功访问<code>Server</code>。这个<code>Ticket</code>只是 针对这个<code>Server</code>，其他<code>Server</code>需要向<code>TGS(Ticket Granting Service)</code>申请。</p><p><img src="https://techdocs.broadcom.com/content/dam/broadcom/techdocs/us/en/assets/docops/casso128/kerberos_environment.png"></p><h2 id="较详简述"><a href="#较详简述" class="headerlink" title="较详简述"></a>较详简述</h2><ol><li><p><strong>AS_REQ</strong>: <code>Client</code>向<code>KDC</code>发起<code>AS_REQ</code>，请求凭据是<code>Client hash</code>加密的时间戳</p></li><li><p><strong>AS_REP</strong>: <code>KDC</code>使用<code>Client hash</code>进行解密，如果结果正确就返回用<code>krbtgt hash</code>加密的<code>TGT</code>票据，<code>TGT</code>里面包含<code>PAC</code>，<code>PAC</code>包含<code>用户Client</code>的<code>sid</code>和<code>用户Client</code>所在的<code>组</code>。</p></li><li><p><strong>TGS_REQ</strong>: <code>Client</code>凭借<code>TGT</code>票据向<code>KDC</code>发起针对特定<code>Server</code>的<code>TGS_REQ</code>请求</p></li><li><p><strong>TGS_REP</strong>: <code>KDC</code>使用<code>krbtgt hash</code>进行解密，如果结果正确，就返回用<code>Server hash</code>加密的<code>TGS</code>票据 [<code>Ticket</code>]（这一步不管用户有没有访问<code>Server</code>的权限，只要<code>TGT</code>正确，就返回<code>TGS</code>票据 [<code>Ticket</code>]）</p></li><li><p><strong>AP_REQ</strong>: <code>Client</code>拿着<code>TGS</code>票据(<code>Ticket</code>)去请求<code>Server</code></p></li><li><p><strong>AP_REP</strong>: <code>Server</code>使用自己的<code>hash</code>解密<code>TGS</code>票据(<code>Ticket</code>)。如果解密正确，就拿着<code>PAC</code>去<code>KDC</code>那边问<code>Client</code>有没有访问权限，域控解密<code>PAC</code>。获取<code>Client</code>的<code>sid</code>，以及所在的<code>组</code>，再根据该服务的<code>ACL</code>，判断<code>Client</code>是否有访问<code>Server</code>的权限。</p></li></ol><h1 id="域认证详细流程"><a href="#域认证详细流程" class="headerlink" title="域认证详细流程"></a>域认证详细流程</h1><h2 id="AS-REQ-amp-AS-REP"><a href="#AS-REQ-amp-AS-REP" class="headerlink" title="AS_REQ &amp; AS_REP"></a>AS_REQ &amp; AS_REP</h2><h2 id="TGS-REQ-amp-TGS-REP"><a href="#TGS-REQ-amp-TGS-REP" class="headerlink" title="TGS_REQ &amp; TGS_REP"></a>TGS_REQ &amp; TGS_REP</h2><h2 id="PAC"><a href="#PAC" class="headerlink" title="PAC"></a>PAC</h2><h1 id="票据伪造的原理"><a href="#票据伪造的原理" class="headerlink" title="票据伪造的原理"></a>票据伪造的原理</h1><h2 id="黄金票据"><a href="#黄金票据" class="headerlink" title="黄金票据"></a>黄金票据</h2><blockquote><p>AS确认Client端登录者用户身份</p></blockquote><ul><li>KDC返回的Msg B：使用 <strong>TGS密钥(KDCHASH/KRBTGT用户NTLMHASH)</strong> 加密的 <strong>TGT(Ticket-Granting-Ticket)**，当我们获取到<code>krbtgt</code>用户的<code>NTLM hash</code>后，便可主动使用<code>krbtgt</code>用户的<code>NTLM hash</code>做为<code>TGS密钥</code>来生成<code>TGT</code>发送给<code>KDC</code>，这样<code>KDC</code>如果通过解密伪造<code>TGT</code>获取到伪造的 **[CLIENT/TGS SESSIONKEY]</strong> 可以成功解密 <code>Authenticator 1</code> 并完成与<code>TGT中</code>的数据进行比对，便成功骗过了<code>KDC</code>，也就是成功伪造了<code>黄金票据</code>。</li></ul><h2 id="白银票据"><a href="#白银票据" class="headerlink" title="白银票据"></a>白银票据</h2><blockquote><p>Client向Server发送服务请求</p></blockquote><ul><li>客户端向服务器发送的为使用 <strong>SERVICE密钥(服务器的NTLMHASH)</strong> 加密的 <strong>CLIENT-TO-SERVER TICKET</strong> ，<code>Ticket</code>中包含用来供服务器解密<code>Authenticator 2</code>的 <strong>CLIENT/SERVER SESSIONKEY</strong> 。如果获取到了<code>Server</code>的<code>NTLM Hash</code>，便可伪造<code>Ticket</code>，和<code>Authenticator 2</code> ，<code>Server</code>在接收到<code>Ticket</code>和<code>Authenticator 2</code>后可以使用自己的<code>NTLM Hash</code>正常解密完成比对，也就是成功伪造了<code>白银票据</code>。</li></ul>]]></content>
+    
+    
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;Kerberos域认证机制刨析&lt;/p&gt;
+&lt;/blockquote&gt;</summary>
+    
+    
+    
+    <category term="渗透测试" scheme="https://www.se7ensec.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
+    
+    
+    <category term="域渗透" scheme="https://www.se7ensec.cn/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>内网渗透|Windows认证机制剖析</title>
@@ -36,29 +59,6 @@
     
     
     <category term="内网渗透" scheme="https://www.se7ensec.cn/tags/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>域渗透|Kerberos域认证刨析</title>
-    <link href="https://www.se7ensec.cn/2021/09/29/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E5%88%A8%E6%9E%90/"/>
-    <id>https://www.se7ensec.cn/2021/09/29/%E5%9F%9F%E6%B8%97%E9%80%8F-Kerberos%E5%9F%9F%E8%AE%A4%E8%AF%81%E5%88%A8%E6%9E%90/</id>
-    <published>2021-09-29T07:10:24.000Z</published>
-    <updated>2021-09-29T11:03:02.527Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>Kerberos域认证刨析</p></blockquote><a id="more"></a><p>开个坑，空闲时间填。</p>]]></content>
-    
-    
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;Kerberos域认证刨析&lt;/p&gt;
-&lt;/blockquote&gt;</summary>
-    
-    
-    
-    <category term="渗透测试" scheme="https://www.se7ensec.cn/categories/%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95/"/>
-    
-    
-    <category term="域渗透" scheme="https://www.se7ensec.cn/tags/%E5%9F%9F%E6%B8%97%E9%80%8F/"/>
     
   </entry>
   
